@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arch_medicos.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TableView fx:id="tabla" layoutY="6.0" prefHeight="215.0" prefWidth="523.0">
+        <columns>
+          <TableColumn fx:id="Ccodigo" prefWidth="92.0" text="codigo" />
+          <TableColumn fx:id="Cnombre" prefWidth="106.0" text="nombre" />
+            <TableColumn fx:id="Ctelefono" prefWidth="99.0" text="telefono" />
+            <TableColumn fx:id="Cedad" prefWidth="101.0" text="edad" />
+            <TableColumn fx:id="Cesp" prefWidth="122.0" text="especialisacion" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="26.0" layoutY="234.0" prefHeight="130.0" prefWidth="255.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" maxWidth="111.0" minWidth="10.0" prefWidth="110.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="145.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Identificacion:" />
+            <Label text="Telefono:" GridPane.rowIndex="2" />
+            <Label text="Edad:" GridPane.rowIndex="3" />
+            <Label prefHeight="15.0" prefWidth="116.0" text="Especialisacion:" GridPane.rowIndex="4" />
+            <Label text="Nombre:" GridPane.rowIndex="1" />
+            <TextField fx:id="txtid" GridPane.columnIndex="1" />
+            <TextField fx:id="txtnom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtTel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtedad" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txttesp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <VBox layoutX="330.0" layoutY="235.0" prefHeight="130.0" prefWidth="134.0">
+         <children>
+            <Button fx:id="btnAñadir" mnemonicParsing="false" onAction="#Añadir" prefHeight="25.0" prefWidth="175.0" text="Añadir" VBox.vgrow="SOMETIMES">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="25.0" prefWidth="141.0" text="Modificar">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="bnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="172.0" text="Eliminar">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="165.0" text="Nuevo" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
